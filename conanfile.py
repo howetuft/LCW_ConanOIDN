@@ -2,6 +2,7 @@ import os
 import shutil
 from conan.tools.files import get, copy
 from conan import ConanFile
+from conan.tools.cmake import CMakeDeps, CMakeToolchain
 
 
 class OidnConan(ConanFile):

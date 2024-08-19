@@ -31,3 +31,11 @@ class OidnConan(ConanFile):
     def package_id(self):
         # We clear everything in order to have a constant package_id and use the cache
         self.info.clear()
+
+    def generate(self):
+        tc = CMakeToolchain(self)
+        tc.generate()
+        cd = CMakeDeps(self)
+        cd.set_property("oidn", "cmake_additional_variables_prefixes", ["OIDN"])
+        cd.generate()
+

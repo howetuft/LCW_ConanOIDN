@@ -11,7 +11,7 @@ class OidnConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     user = "luxcorewheels"
     channel = "luxcorewheels"
-    revision_mode = "scm_folder"
+    revision_mode = "hash"
 
     def build(self):
         url = f"https://github.com/RenderKit/oidn/releases/download/v{self.version}/oidn-{self.version}.x64.windows.zip"
